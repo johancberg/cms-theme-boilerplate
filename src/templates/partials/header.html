@@ -36,12 +36,10 @@
             </div>
           </div>
         {% endif %}
-        <div class="header__search header--element">
-          {% module 'site_search' path='@hubspot/search_input',
-            label='Search',
-            field_label='Search',
-            placeholder=''
-          %}
+        <div class="header__menu">
+            <a href="#home" class="header__skip">HOME</a>
+            <a href="#about" class="header__skip">ABOUT</a>
+            <a href="#contact" class="header__skip">CONTACT</a>
         </div>
       </div>
       {# End header navigation row one #}
