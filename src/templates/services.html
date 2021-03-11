@@ -11,7 +11,7 @@
 <main id="main-content" class="body-container-wrapper">
   {% dnd_area 'dnd_area' class='body-container body-container--about', label='Main section' %}
 
-    {# Main section #}
+    {# Header section #}
     {% dnd_section
       background_image={
         'backgroundPosition': 'MIDDLE_CENTER',
@@ -35,8 +35,8 @@
           {% end_dnd_module %}
         {% end_dnd_row %}
       {% end_dnd_column %}
-    
     {% end_dnd_section %}
+    {# End header section #}
     
     {% dnd_section %}
       {% dnd_module path='@hubspot/linked_image',
@@ -54,13 +54,65 @@
         width=6
       %}
         {% module_attribute 'html' %}
-          <h1>What we do.</h1>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          <h1>Sustainable contractors</h1>
+          <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. 
+            Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. 
+            Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. </p>
         {% end_module_attribute %}
       {% end_dnd_module %}
     {% end_dnd_section %}
-    {# End main section #}
+    
+    {% dnd_section %}
+      {% dnd_module path='@hubspot/rich_text',
+        offset=0,
+        width=6
+      %}
+        {% module_attribute 'html' %}
+          <h1>Crossfunctional teams</h1>
+          <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam,
+            eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+            Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit,
+            sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. </p>
+        {% end_module_attribute %}
+      {% end_dnd_module %}
+      {% dnd_module path='@hubspot/linked_image',
+        img={
+          'alt': 'Coworkers sitting together and smiling outside.',
+          'size_type': 'auto',
+          'src': get_asset_url('../images/services/content_2.png')
+        },
+        offset=6,
+        width=6
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_section %}
+
+    {% dnd_section %}
+      {% dnd_module path='@hubspot/linked_image',
+        img={
+          'alt': 'Coworkers sitting together and smiling outside.',
+          'size_type': 'auto',
+          'src': get_asset_url('../images/services/content_3.png')
+        },
+        offset=0,
+        width=6
+      %}
+      {% end_dnd_module %}
+      {% dnd_module path='@hubspot/rich_text',
+        offset=6,
+        width=6
+      %}
+        {% module_attribute 'html' %}
+          <h1>Planning</h1>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
+            totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+            Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit,
+            sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
+        {% end_module_attribute %}
+      {% end_dnd_module %}
+    {% end_dnd_section %}
 
   {% end_dnd_area %}
 </main>
