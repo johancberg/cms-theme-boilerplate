@@ -11,12 +11,8 @@
   justify-content: space-between;
 }
 
-.header__row-1 {
-  padding-top: 20px;
-}
-
-.header__row-1,
-.header__row-2 {
+.header__row {
+  padding: 1em 0;
   align-items: center;
   display: flex;
   justify-content: flex-end;
@@ -39,13 +35,20 @@
     position: relative;
   }
 
-  .header__row-1 {
-    padding-top: 0;
-  }
-
-  .header__row-2 {
+  .header__row {
     justify-content: center;
     padding: 30px;
+  }
+
+  .header__menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+
+  .header__menu a {
+    padding: 0.4em 0;
   }
 }
 
@@ -108,10 +111,10 @@
 }
 
 .header__menu a {
-  font-size: 18px;
+  font-size: 0.65em;
   color: grey;
   font-weight: 700;
-  padding: 0 20px;
+  padding: 0 1.1em;
 }
 
 /* Search bar */
