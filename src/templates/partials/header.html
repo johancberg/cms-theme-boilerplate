@@ -24,7 +24,7 @@
     <div class="header__column">
 
       {# Header navigation row one #}
-      <div class="header__row-1">
+      <div class="header__row">
         {% if content.translated_content|length || is_listing_view && group.translations %}
           <div class="header__language-switcher header--element">
             <div class="header__language-switcher--label">
@@ -43,22 +43,6 @@
         </div>
       </div>
       {# End header navigation row one #}
-
-      {# Header navigation row two #}
-      <div class="header__row-2">
-        <div class="header--toggle header__navigation--toggle"></div>
-        {% if content.translated_content|length || is_listing_view && group.translations %}
-          <div class="header--toggle header__language-switcher--toggle"></div>
-        {% endif %}
-        <div class="header--toggle header__search--toggle"></div>
-        <div class="header__close--toggle"></div>
-        <div class="header__navigation header--element">
-          {% module 'navigation-primary' path='../../modules/menu-section',
-            label='Primary navigation'
-          %}
-        </div>
-      </div>
-      {# End header navigation row two #}
 
     </div>
     {# End header navigation column #}
