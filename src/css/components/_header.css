@@ -7,12 +7,13 @@
 /* Header container */
 
 .header__container {
+  position: absolute;
   display: flex;
   justify-content: space-between;
 }
 
 .header__row {
-  padding: 1em 0;
+  padding: 1.4em 0 1em;
   align-items: center;
   display: flex;
   justify-content: flex-end;
@@ -112,7 +113,7 @@
 
 .header__menu a {
   font-size: 0.65em;
-  color: grey;
+  color: white;
   font-weight: 700;
   padding: 0 1.1em;
 }

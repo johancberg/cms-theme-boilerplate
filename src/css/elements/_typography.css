@@ -17,6 +17,10 @@ p {
   margin: 0 0 1.4rem;
 }
 
+h2 i .quote {
+  font-weight: 200;
+}
+
 /* Anchors */
 
 a {
@@ -71,7 +75,9 @@ code {
 /* Blockquotes */
 
 blockquote {
-  border-left: 2px solid;
+  font-size: 1.5rem;
+  font-weight: 200;
+  line-height: 52px;
   margin: 0 0 1.4rem;
   padding-left: 15px;
 }
