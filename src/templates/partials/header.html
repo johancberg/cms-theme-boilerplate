@@ -5,6 +5,7 @@
 <header class="header">
 
   {# The link below is used for a navigation skipper which allows users navigating the site with their keyboard to skip over the site navigation. More information on the navigation skipper can be found here: https://github.com/HubSpot/cms-theme-boilerplate/wiki/Accessibility #}
+  {{ require_js(get_public_template_url('../../js/toggle-menu.js')) }}
   <a href="#main-content" class="header__skip">Skip to content</a>
 
   {# Top header drag and drop area #}
@@ -12,13 +13,13 @@
   {% end_dnd_area %}
   {# End top header drag and drop area #}
 
-  <div class="header__container content-wrapper">
+  <div class="hamburger__button">
+    <div class="hamburger__menu"></div>
+    <div class="hamburger__menu"></div>
+    <div class="hamburger__menu"></div>
+  </div>
 
-    {# Header logo column #}
-    <div class="header__logo header__logo--main">
-      {% module 'site_logo' path='@hubspot/logo' %}
-    </div>
-    {# End header logo column #}
+  <div class="header__container content-wrapper">
 
     {# Header navigation column #}
     <div class="header__column">
@@ -37,9 +38,7 @@
           </div>
         {% endif %}
         <div class="header__menu">
-            <a href="#about">ABOUT</a>
-            <a href="#services">SERVICES</a>
-            <a href="#contact">CONTACT</a>
+          {% simple_menu menu_tree=[{"contentType": null, "subCategory": null, "pageLinkName": null, "pageLinkId": null, "isPublished": false, "categoryId": null, "linkParams": null, "linkLabel": "About", "linkTarget": null, "linkUrl": "http://www.hubspot.com", "children": [], "isDeleted": false}, {"contentType": null, "subCategory": null, "pageLinkName": null, "pageLinkId": null, "isPublished": false, "categoryId": null, "linkParams": null, "linkLabel": "Services", "linkTarget": null, "linkUrl": "http://www.hubspot.com/internet-marketing-company", "children": [{"contentType": null, "subCategory": null, "pageLinkName": null, "linkUrl": "http://www.hubspot.com/company/management", "isPublished": false, "children": [], "linkParams": null, "linkLabel": "Our Service", "linkTarget": null, "pageLinkId": null, "categoryId": null, "isDeleted": false}], "isDeleted": false}, {"contentType": null, "subCategory": null, "pageLinkName": null, "pageLinkId": null, "isPublished": false, "categoryId": null, "linkParams": null, "linkLabel": "Contact", "linkTarget": null, "linkUrl": "http://www.hubspot.com/contact", "children": [], "isDeleted": false}] %}  
         </div>
       </div>
       {# End header navigation row one #}

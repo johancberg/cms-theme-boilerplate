@@ -71,7 +71,7 @@ h6 {
 }
 
 h1 {
-  font-size: 2rem;
+  font-size: calc(1.75vw + 1rem);
 }
 
 h2 {

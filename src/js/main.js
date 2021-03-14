@@ -18,6 +18,7 @@
   var langToggle = document.querySelector('.header__language-switcher--toggle');
   var searchToggle = document.querySelector('.header__search--toggle');
   var closeToggle = document.querySelector('.header__close--toggle');
+  var menuToggle = document.querySelector('.header__menu--toggle');
   var allElements = document.querySelectorAll(
     '.header--element, .header--toggle'
   );
@@ -79,6 +80,10 @@
     closeToggle.classList.remove('show');
   }
 
+  function toggleMenu() {
+    menuToggle.classList.toggle('show')
+  }
+
   // Function to disable the other checkbox inputs on the email subscription system page template
   function toggleDisabled() {
     var emailSubItem = document.querySelectorAll('#email-prefs-form .item');
@@ -127,7 +132,9 @@
       if (emailGlobalUnsub) {
         emailGlobalUnsub.addEventListener('change', toggleDisabled);
       }
-
+      if (menuToggle) {
+        menuToggle.addEventListener('click', toggleMenu)
+      }
     }
   });
 
